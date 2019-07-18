@@ -1,0 +1,14 @@
+ion-content {
+    --background: url('src/assets/BasketFondo.jpg') no-repeat center center / cover !important;
+}
+
+ion-input {
+    border: 2px solid #292929;
+    --placeholder-color: white !important;
+    --placeholder-opacity: 1;
+}
+
+/* ion-label:focus {
+    --color: #FF5D00;
+    font-size: 20px;
+} */

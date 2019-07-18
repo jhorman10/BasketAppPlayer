@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="basketOrange">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center color="light" style="font-family: 'Raleway-Light'">RESULTADOS</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let p of partidos">
+    <ion-item>
+      <ion-label>Fecha: {{p.Fecha}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ciudad: {{p.Locacion}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Torneo, Grupo: {{p.NombreTorneo}} - {{p.Grupo}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ganador: {{p.Ganador}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Perdedor: {{p.Perdedor}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Marcador: {{p.PuntosGanador}} - {{p.PuntosPerdedor}}</ion-label>
+    </ion-item>
+    <hr>
+    <hr>
+  </ion-list>
+  
+
+</ion-content>

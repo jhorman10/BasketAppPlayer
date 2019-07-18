@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="basketOrange">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center color="light" style="font-family: 'Raleway-Light'">PERFIL</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/editar-perfil">
+        <ion-icon color="light" slot="icon-only" name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-img src="/assets/avatar.jpg">
+      </ion-img>
+      <ion-card-title text-center style="font-family: 'Raleway-Light'">Player</ion-card-title>
+      <ion-card-subtitle text-center style="font-family: 'Raleway-Light'">ID: 0000</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <p>
+    ESTADISTICAS
+  </p>
+  <ion-item>
+    <ion-icon slot="start" name="basketball"></ion-icon>
+    <ion-label style="font-family: 'Raleway-Light'">
+      PARTIDOS JUGADOS
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="ribbon"></ion-icon>
+    <ion-label style="font-family: 'Raleway-Light'">
+      PARTIDOS GANADOS
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="time"></ion-icon>
+    <ion-label style="font-family: 'Raleway-Light'">
+      PUNTOS DOBLES
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="time"></ion-icon>
+    <ion-label style="font-family: 'Raleway-Light'">
+      PUNTOS TRIPLES
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon slot="start" name="time"></ion-icon>
+    <ion-label style="font-family: 'Raleway-Light'">
+      PUNTOS TOTALES
+    </ion-label>
+  </ion-item>
+  <p>
+    SALIR
+  </p>
+
+  <ion-item lines="none" detail (click)="cerrarSesion()">
+    <ion-icon slot="start" name="close-circle"></ion-icon>
+    <ion-label style="font-family: 'Raleway-Light'">
+      CERRAR SESIÓN
+    </ion-label>
+  </ion-item>
+</ion-content>

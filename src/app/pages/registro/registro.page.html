@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="basketOrange">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center color="light" style="font-family: 'Raleway-Light'">REGISTRARSE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+  <form (ngSubmit)="userRegister(register); register.reset()" #register="ngForm">
+    <ion-list>
+      <br>
+      <ion-item>
+        <ion-label style="font-family: 'Raleway-Light'" position="floating">Nombre completo</ion-label>
+        <ion-input type="text" name="nombre" [(ngModel)]="usuario.nombre" minlength="2" required #nombre
+          style="font-family: 'Raleway-Light'">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label style="font-family: 'Raleway-Light'" position="floating">Numero de cédula</ion-label>
+        <ion-input type="number" name="cedular" [(ngModel)]="usuario.cedula" minlength="2" #cedula required
+          style="font-family: 'Raleway-Light'">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label style="font-family: 'Raleway-Light'" position="floating">Correo electronico</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="usuario.email" #email
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required style="font-family: 'Raleway-Light'">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label style="font-family: 'Raleway-Light'" position="floating">Confirmar correo electronico</ion-label>
+        <ion-input type="email" name="email2" [(ngModel)]="usuario.email2" #email2
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required style="font-family: 'Raleway-Light'">
+        </ion-input>
+      </ion-item>
+      <ion-label *ngIf="email.value != email2.value" style="color: red;font-family: 'Raleway-Light'">El correo no es
+        igual</ion-label>
+      <ion-item>
+        <ion-label style="font-family: 'Raleway-Light'" position="floating">Contraseña</ion-label>
+        <ion-input type="password" name="password" #password [(ngModel)]="usuario.pw" minlength="6" required
+          style="font-family: 'Raleway-Light'">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label style="font-family: 'Raleway-Light'" position="floating">Confirmar contraseña</ion-label>
+        <ion-input type="password" name="password2" [(ngModel)]="usuario.pw2" #password2 minlength="6" required
+          style="font-family: 'Raleway-Light'">
+        </ion-input>
+      </ion-item>
+      <ion-label *ngIf="password.value != password2.value" style="color: red;font-family: 'Raleway-Light'">La contraseña
+        no es igual</ion-label>
+      <br><br>
+    </ion-list>
+    <!-- <label style="color: red;" *ngIf="!register.valid" ><small>Luego de registrarse el Admin se pondra en contacto con usted</small></label> -->
+    <br><br>
+    <ion-button type="submit" color="basketOrange">
+      <ion-label style="font-family: 'Raleway-Light'" color="light">Registrarse</ion-label>
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="basketOrange">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center color="light" style="font-family: 'Raleway-Light'">BUSCAR TORNEO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+  <ion-input text-left type="text" name="search" placeholder="Nombre del torneo">
+    <ion-icon name="search" padding></ion-icon>
+  </ion-input>
+  <ion-item-group>
+    <p>
+      Resultados de la busqueda
+    </p>
+    <ion-list *ngFor="let t of torneos">
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>{{ t.NombreTorneo }}</ion-label>
+          <ion-checkbox color="basketOrange" slot="end" value="{{t.id}}"></ion-checkbox>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button text-center color="basketOrange">
+      <ion-label color="light">Seleccionar torneo</ion-label>
+    </ion-button>
+  </ion-item-group>
+</ion-content>

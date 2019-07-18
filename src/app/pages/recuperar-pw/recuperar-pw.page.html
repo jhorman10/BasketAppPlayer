@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="basketOrange">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center color="light" style="font-family: 'Raleway-Light'">RECUPERAR CONTRASEÑA</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content text-center>
+  <form (ngSubmit)="userForgot(forgot); forgot.reset()" #forgot="ngForm">
+    <ion-list>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Nombre completo</ion-label>
+        <ion-input type="text" name="nombre" [(ngModel)]="usuario.nombre" minlength="2" required #nombre>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Numero de cédula</ion-label>
+        <ion-input type="number" name="cedular" [(ngModel)]="usuario.cedula" minlength="2" #cedula required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="usuario.email" #email
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirmar correo electronico</ion-label>
+        <ion-input type="email" name="email2" [(ngModel)]="usuario.email2" #email2 required>
+        </ion-input>
+      </ion-item>
+      <ion-label *ngIf="email.value != email2.value" style="color: red;">El correo no es igual</ion-label>
+      <br><br>
+    </ion-list>
+    <!-- <label style="color: red;" *ngIf="!register.valid" ><small>Luego de registrarse el Admin se pondra en contacto con usted</small></label> -->
+    <br><br>
+    <ion-button type="submit" color="basketOrange">
+      <ion-label color="light">Terminar</ion-label>
+    </ion-button>
+  </form>
+</ion-content>

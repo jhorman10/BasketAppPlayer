@@ -1,0 +1,10 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#574325",
+        "titleBar.activeBackground": "#312719",
+        "titleBar.activeForeground": "#FBF9F7"
+    },
+     "editor.fontFamily": "'Fira Code iScript', monospace",
+     "git.ignoreLimitWarning": true,
+     "editor.fontLigatures": true
+}
